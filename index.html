@@ -303,6 +303,55 @@
       .cert{flex-direction:column}
       .credential-link{align-self:flex-start}
     }
+  
+    /* V3 project showcase */
+    .project-hero-image{
+      margin-top:26px;border-radius:20px;overflow:hidden;border:1px solid rgba(148,163,184,.14);
+      background:#07101b;box-shadow:0 16px 44px rgba(0,0,0,.24)
+    }
+    .project-hero-image img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+    .project-hero-image figcaption{padding:12px 15px;color:#8fa1b7;font-size:.82rem;border-top:1px solid var(--line)}
+    .showcase-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin:34px 0 18px}
+    .showcase-head h4{font-size:1.18rem;letter-spacing:-.02em}
+    .showcase-head p{color:var(--muted);font-size:.88rem;max-width:650px}
+    .media-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .media-card{
+      position:relative;overflow:hidden;border-radius:17px;
+      border:1px solid rgba(148,163,184,.13);background:rgba(255,255,255,.025);
+      cursor:zoom-in;transition:.25s
+    }
+    .media-card:hover{transform:translateY(-3px);border-color:rgba(83,216,255,.25)}
+    .media-card img{width:100%;height:190px;display:block;object-fit:cover;background:#09111e}
+    .media-card .media-copy{padding:13px 14px}
+    .media-card h5{font-size:.91rem}
+    .media-card p{font-size:.77rem;color:#8195ac;margin-top:3px}
+    .media-card.featured{grid-column:span 2}
+    .media-card.featured img{height:250px}
+    .etl-visuals{margin-top:24px;display:grid;grid-template-columns:1.2fr .8fr;gap:14px}
+    .etl-visuals .media-card img{height:260px}
+    .lightbox{
+      position:fixed;inset:0;z-index:2000;display:none;place-items:center;
+      padding:28px;background:rgba(2,6,12,.92);backdrop-filter:blur(12px)
+    }
+    .lightbox.open{display:grid}
+    .lightbox-inner{width:min(1200px,96vw);max-height:92vh;position:relative}
+    .lightbox img{width:100%;max-height:84vh;object-fit:contain;border-radius:18px;border:1px solid rgba(255,255,255,.12);background:#07101b}
+    .lightbox-close{
+      position:absolute;right:8px;top:-44px;width:36px;height:36px;border-radius:50%;
+      border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;
+      font-size:1.1rem;cursor:pointer
+    }
+    @media(max-width:980px){
+      .media-grid{grid-template-columns:repeat(2,1fr)}
+      .etl-visuals{grid-template-columns:1fr}
+    }
+    @media(max-width:720px){
+      .media-grid{grid-template-columns:1fr}
+      .media-card.featured{grid-column:auto}
+      .media-card img,.media-card.featured img,.etl-visuals .media-card img{height:auto;aspect-ratio:16/9}
+      .showcase-head{align-items:flex-start;flex-direction:column}
+    }
+
   </style>
 </head>
 
@@ -457,6 +506,11 @@
               This section is intentionally separate from the repository link. It gives recruiters a fast architectural view of the platform directly inside the portfolio.
             </p>
 
+            <figure class="project-hero-image">
+              <img class="zoomable" src="https://raw.githubusercontent.com/Aya-Abdel-Nasser/pharmstock-ai-platform/main/docs/assets/screenshots/Untitled%20Diagram.drawio%20(5).png" alt="PharmStock AI Platform architecture diagram">
+              <figcaption>End-to-end PharmStock architecture — CDC, streaming, distributed processing, cloud analytics, MLOps, governed decisions and BI.</figcaption>
+            </figure>
+
             <div class="architecture-grid">
               <div class="arch-step"><div class="n">01</div><h4>PostgreSQL</h4><p>Operational transactional source.</p></div>
               <div class="arch-step"><div class="n">02</div><h4>Debezium</h4><p>Change Data Capture from source tables.</p></div>
@@ -466,6 +520,92 @@
               <div class="arch-step"><div class="n">06</div><h4>dbt + Airflow</h4><p>Transformation, modeling, orchestration and DQ.</p></div>
               <div class="arch-step"><div class="n">07</div><h4>MLflow + Online ML</h4><p>Model lifecycle, registry and serving.</p></div>
               <div class="arch-step"><div class="n">08</div><h4>Governance + Power BI</h4><p>Human-controlled decisions and analytics.</p></div>
+            </div>
+          </article>
+
+          <article class="card architecture-section reveal">
+            <div class="project-kicker">Implementation Evidence</div>
+            <h3 style="font-size:clamp(1.6rem,3vw,2.25rem);margin-top:8px;letter-spacing:-.035em;">A working platform, not just an architecture diagram.</h3>
+            <p style="color:var(--muted);max-width:860px;margin-top:8px;">
+              Selected implementation evidence from the PharmStock repository: orchestration, cloud warehouse layers, MLOps, governed operations, platform monitoring and analytics.
+            </p>
+
+            <div class="showcase-head">
+              <div>
+                <h4>Platform & Engineering Evidence</h4>
+              </div>
+              <p>Click any screenshot to inspect it at full size.</p>
+            </div>
+
+            <div class="media-grid">
+              <figure class="media-card featured">
+                <img class="zoomable" src="https://raw.githubusercontent.com/Aya-Abdel-Nasser/pharmstock-ai-platform/main/docs/assets/screenshots/pharmstock-platform-control-center.png" alt="PharmStock platform control center">
+                <figcaption class="media-copy"><h5>Unified Platform Control Center</h5><p>Cross-platform operational monitoring across data, ML and governed services.</p></figcaption>
+              </figure>
+
+              <figure class="media-card">
+                <img class="zoomable" src="https://raw.githubusercontent.com/Aya-Abdel-Nasser/pharmstock-ai-platform/main/docs/assets/screenshots/airflow-pharmstock-dags-orchestration.png" alt="Airflow orchestration">
+                <figcaption class="media-copy"><h5>Airflow Orchestration</h5><p>Operational DAGs for health, refresh and reconciliation workflows.</p></figcaption>
+              </figure>
+
+              <figure class="media-card">
+                <img class="zoomable" src="https://raw.githubusercontent.com/Aya-Abdel-Nasser/pharmstock-ai-platform/main/docs/assets/screenshots/bigquery-data-platform-layers.png" alt="BigQuery data platform layers">
+                <figcaption class="media-copy"><h5>BigQuery Platform Layers</h5><p>Cloud analytical storage organized by platform responsibility.</p></figcaption>
+              </figure>
+
+              <figure class="media-card">
+                <img class="zoomable" src="https://raw.githubusercontent.com/Aya-Abdel-Nasser/pharmstock-ai-platform/main/docs/assets/screenshots/bigquery-gold-analytics-marts.png" alt="BigQuery gold analytics marts">
+                <figcaption class="media-copy"><h5>Gold Analytics Marts</h5><p>Curated analytical models prepared for downstream consumers.</p></figcaption>
+              </figure>
+
+              <figure class="media-card">
+                <img class="zoomable" src="https://raw.githubusercontent.com/Aya-Abdel-Nasser/pharmstock-ai-platform/main/docs/assets/screenshots/mlflow-registered-models-champion-registry.png" alt="MLflow model registry">
+                <figcaption class="media-copy"><h5>MLflow Model Registry</h5><p>Registered operational models with versioning and champion lifecycle.</p></figcaption>
+              </figure>
+
+              <figure class="media-card">
+                <img class="zoomable" src="https://raw.githubusercontent.com/Aya-Abdel-Nasser/pharmstock-ai-platform/main/docs/assets/screenshots/stage7m-governed-operational-decision-workbench.png" alt="Governed operational decision workbench">
+                <figcaption class="media-copy"><h5>Decision Workbench</h5><p>Human-governed operational review and decision workflow.</p></figcaption>
+              </figure>
+
+              <figure class="media-card">
+                <img class="zoomable" src="https://raw.githubusercontent.com/Aya-Abdel-Nasser/pharmstock-ai-platform/main/docs/assets/screenshots/stage7o-governed-ai-assistant.png" alt="Governed AI assistant">
+                <figcaption class="media-copy"><h5>Governed AI Assistant</h5><p>Evidence-aware assistance within explicit operational boundaries.</p></figcaption>
+              </figure>
+            </div>
+
+            <div class="showcase-head">
+              <div>
+                <h4>Business Intelligence Gallery</h4>
+              </div>
+              <p>Power BI views demonstrating how engineering outputs are consumed by operational and executive users.</p>
+            </div>
+
+            <div class="media-grid">
+              <figure class="media-card featured">
+                <img class="zoomable" src="https://raw.githubusercontent.com/Aya-Abdel-Nasser/pharmstock-ai-platform/main/docs/assets/screenshots/powerbi-executive-operations-dashboard.png" alt="Power BI executive operations dashboard">
+                <figcaption class="media-copy"><h5>Executive Operations</h5><p>Consolidated visibility across sales, demand, inventory and risk.</p></figcaption>
+              </figure>
+
+              <figure class="media-card">
+                <img class="zoomable" src="https://raw.githubusercontent.com/Aya-Abdel-Nasser/pharmstock-ai-platform/main/docs/assets/screenshots/powerbi-branch-demand-performance.png" alt="Power BI branch and demand performance">
+                <figcaption class="media-copy"><h5>Branch & Demand Performance</h5><p>Operational branch-level performance and demand visibility.</p></figcaption>
+              </figure>
+
+              <figure class="media-card">
+                <img class="zoomable" src="https://raw.githubusercontent.com/Aya-Abdel-Nasser/pharmstock-ai-platform/main/docs/assets/screenshots/powerbi-inventory-expiry-risk.png" alt="Power BI inventory expiry risk">
+                <figcaption class="media-copy"><h5>Inventory & Expiry Risk</h5><p>Inventory exposure and expiry-oriented operational analytics.</p></figcaption>
+              </figure>
+
+              <figure class="media-card">
+                <img class="zoomable" src="https://raw.githubusercontent.com/Aya-Abdel-Nasser/pharmstock-ai-platform/main/docs/assets/screenshots/powerbi-supplier-procurement-performance.png" alt="Power BI supplier procurement performance">
+                <figcaption class="media-copy"><h5>Supplier & Procurement</h5><p>Supplier-facing and procurement-oriented performance indicators.</p></figcaption>
+              </figure>
+
+              <figure class="media-card">
+                <img class="zoomable" src="https://raw.githubusercontent.com/Aya-Abdel-Nasser/pharmstock-ai-platform/main/docs/assets/screenshots/powerbi-ai-decision-operations.png" alt="Power BI AI and decision operations">
+                <figcaption class="media-copy"><h5>AI & Decision Operations</h5><p>Machine-learning outputs connected to governed decision workflows.</p></figcaption>
+              </figure>
             </div>
           </article>
 
@@ -484,6 +624,17 @@
 
               <div class="project-actions">
                 <a class="btn btn-primary" href="https://github.com/Aya-Abdel-Nasser/End-to-End-Sales-DataWarehouse-ETL" target="_blank" rel="noopener noreferrer">View Repository ↗</a>
+              </div>
+
+              <div class="etl-visuals">
+                <figure class="media-card">
+                  <img class="zoomable" src="https://raw.githubusercontent.com/Aya-Abdel-Nasser/End-to-End-Sales-DataWarehouse-ETL/main/Screenshots/Load_FactSales_Flow.png" alt="SSIS FactSales ETL flow">
+                  <figcaption class="media-copy"><h5>FactSales Load</h5><p>Core fact loading workflow with dimension lookups.</p></figcaption>
+                </figure>
+                <figure class="media-card">
+                  <img class="zoomable" src="https://raw.githubusercontent.com/Aya-Abdel-Nasser/End-to-End-Sales-DataWarehouse-ETL/main/Screenshots/DimCustomer_SCD_DataFlow.png" alt="SSIS customer slowly changing dimension flow">
+                  <figcaption class="media-copy"><h5>DimCustomer — SCD Type 2</h5><p>Historical customer change tracking inside the dimensional model.</p></figcaption>
+                </figure>
               </div>
             </div>
 
@@ -599,6 +750,14 @@
     </div>
   </footer>
 
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close image">×</button>
+      <img id="lightboxImage" alt="">
+    </div>
+  </div>
+
   <script>
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -610,6 +769,33 @@
     }, { threshold: 0.12 });
 
     document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    document.querySelectorAll('.zoomable').forEach((img) => {
+      img.addEventListener('click', () => {
+        lightboxImage.src = img.src;
+        lightboxImage.alt = img.alt || '';
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    const closeLightbox = () => {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImage.src = '';
+    };
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
   </script>
 </body>
 </html>
