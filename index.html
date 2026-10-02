@@ -3,25 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#070b14" />
+  <meta name="theme-color" content="#060b14" />
   <title>Aya Abdel-Nasser | Data Engineer</title>
   <meta name="description" content="Aya Abdel-Nasser — Data Engineer building production-oriented data platforms, ETL/ELT pipelines, analytics engineering workflows, streaming architectures and cloud analytics systems." />
 
   <style>
     :root{
-      --bg:#070b14;
-      --bg-soft:#0b1220;
-      --panel:rgba(13,22,38,.72);
-      --panel-2:rgba(18,30,50,.88);
+      --bg:#060b14;
+      --bg2:#09111e;
+      --panel:rgba(13,23,40,.78);
+      --panel-strong:rgba(15,27,47,.95);
       --line:rgba(148,163,184,.14);
-      --text:#f8fbff;
+      --text:#f7fbff;
       --muted:#9eb0c7;
-      --cyan:#49d7ff;
-      --cyan-2:#13bff3;
+      --cyan:#53d8ff;
+      --cyan2:#16c7f5;
       --violet:#8b5cf6;
       --green:#22c55e;
-      --shadow:0 18px 60px rgba(0,0,0,.35);
-      --radius:22px;
+      --shadow:0 24px 70px rgba(0,0,0,.38);
+      --radius:24px;
     }
 
     *{box-sizing:border-box;margin:0;padding:0}
@@ -30,190 +30,210 @@
       font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       color:var(--text);
       background:
-        radial-gradient(circle at 15% 15%, rgba(73,215,255,.08), transparent 24%),
-        radial-gradient(circle at 86% 12%, rgba(139,92,246,.10), transparent 25%),
-        linear-gradient(180deg,#070b14 0%,#08101c 52%,#070b14 100%);
+        radial-gradient(circle at 10% 12%, rgba(83,216,255,.08), transparent 24%),
+        radial-gradient(circle at 88% 8%, rgba(139,92,246,.12), transparent 25%),
+        linear-gradient(180deg,var(--bg) 0%,var(--bg2) 52%,var(--bg) 100%);
       line-height:1.65;
       overflow-x:hidden;
     }
     body:before{
       content:"";
-      position:fixed; inset:0; pointer-events:none; z-index:-1;
+      position:fixed;inset:0;z-index:-2;pointer-events:none;
       background-image:
-        linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
-        linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
-      background-size:44px 44px;
-      mask-image:linear-gradient(to bottom,rgba(0,0,0,.7),transparent 86%);
+        linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);
+      background-size:46px 46px;
+      mask-image:linear-gradient(to bottom,rgba(0,0,0,.75),transparent 88%);
     }
     a{text-decoration:none;color:inherit}
     .wrap{width:min(1180px,92%);margin:auto}
     .eyebrow{
-      display:inline-flex; align-items:center; gap:9px;
-      font-size:.82rem; font-weight:800; letter-spacing:.13em; text-transform:uppercase;
-      color:var(--cyan);
+      display:inline-flex;align-items:center;gap:9px;
+      color:var(--cyan);font-size:.8rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase
     }
     .dot{
       width:8px;height:8px;border-radius:50%;background:var(--cyan);
-      box-shadow:0 0 0 6px rgba(73,215,255,.08),0 0 24px rgba(73,215,255,.7)
+      box-shadow:0 0 0 6px rgba(83,216,255,.08),0 0 22px rgba(83,216,255,.72)
     }
 
     nav{
       position:sticky;top:0;z-index:50;
       backdrop-filter:blur(18px);
-      background:rgba(7,11,20,.72);
-      border-bottom:1px solid var(--line);
+      background:rgba(6,11,20,.76);
+      border-bottom:1px solid var(--line)
     }
     .nav-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
     .brand{display:flex;align-items:center;gap:12px;font-weight:850;letter-spacing:-.02em}
     .brand-mark{
-      width:38px;height:38px;border-radius:12px;
-      display:grid;place-items:center;
-      background:linear-gradient(135deg,rgba(73,215,255,.20),rgba(139,92,246,.18));
-      border:1px solid rgba(73,215,255,.25);
-      color:var(--cyan);font-weight:900;
+      width:38px;height:38px;border-radius:12px;display:grid;place-items:center;
+      background:linear-gradient(135deg,rgba(83,216,255,.18),rgba(139,92,246,.18));
+      border:1px solid rgba(83,216,255,.25);color:var(--cyan);font-weight:900
     }
-    .nav-links{display:flex;align-items:center;gap:24px;color:#b8c4d4;font-size:.94rem}
+    .nav-links{display:flex;align-items:center;gap:23px;color:#b8c4d4;font-size:.93rem}
     .nav-links a{transition:.25s}
     .nav-links a:hover{color:#fff}
-    .nav-cta{
-      padding:10px 15px;border:1px solid rgba(73,215,255,.38);border-radius:12px;color:var(--cyan)!important
-    }
+    .nav-cta{padding:10px 15px;border:1px solid rgba(83,216,255,.38);border-radius:12px;color:var(--cyan)!important}
 
-    .hero{padding:108px 0 88px}
-    .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:58px;align-items:center}
+    .hero{padding:96px 0 82px}
+    .hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:58px;align-items:center}
     .hero h1{
       margin-top:18px;
-      font-size:clamp(3.3rem,7vw,6.6rem);
+      font-size:clamp(3.4rem,7vw,6.4rem);
       line-height:.95;
-      letter-spacing:-.065em;
-      max-width:820px;
+      letter-spacing:-.065em
     }
     .hero h1 span{
-      display:block;
-      background:linear-gradient(90deg,#ffffff 2%,#cfefff 48%,#b9a8ff 100%);
-      -webkit-background-clip:text;background-clip:text;color:transparent;
+      background:linear-gradient(90deg,#fff 0%,#d7f3ff 52%,#c7b9ff 100%);
+      -webkit-background-clip:text;background-clip:text;color:transparent
     }
     .role{
-      margin-top:18px;
-      font-size:clamp(1.5rem,3vw,2.35rem);
-      color:#aabbd0;font-weight:650;letter-spacing:-.025em;
+      margin-top:18px;font-size:clamp(1.45rem,3vw,2.2rem);
+      color:#adbed3;font-weight:700;letter-spacing:-.025em
     }
-    .hero-copy{margin-top:24px;color:var(--muted);font-size:1.06rem;max-width:700px}
+    .hero-copy{margin-top:24px;color:var(--muted);font-size:1.05rem;max-width:720px}
     .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
     .btn{
       min-height:48px;padding:0 18px;border-radius:14px;
       display:inline-flex;align-items:center;justify-content:center;gap:9px;
-      font-weight:800;border:1px solid transparent;transition:.25s;
+      font-weight:800;border:1px solid transparent;transition:.25s
     }
     .btn:hover{transform:translateY(-2px)}
     .btn-primary{
-      color:#03131a;background:linear-gradient(135deg,var(--cyan),#7fe5ff);
-      box-shadow:0 10px 30px rgba(73,215,255,.17)
+      color:#03131a;background:linear-gradient(135deg,var(--cyan),#8be9ff);
+      box-shadow:0 10px 30px rgba(83,216,255,.16)
     }
     .btn-ghost{
-      border-color:rgba(148,163,184,.2);background:rgba(255,255,255,.025);color:#e6eef8
+      border-color:rgba(148,163,184,.2);
+      background:rgba(255,255,255,.026);
+      color:#e7eff8
     }
-    .btn-ghost:hover{border-color:rgba(73,215,255,.45);color:var(--cyan)}
-    .hero-meta{
-      margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;color:#8294aa;font-size:.88rem
-    }
-    .hero-meta span{display:flex;align-items:center;gap:8px}
-    .hero-meta b{color:#c9d7e7;font-weight:700}
+    .btn-ghost:hover{border-color:rgba(83,216,255,.45);color:var(--cyan)}
+    .hero-meta{margin-top:28px;display:flex;flex-wrap:wrap;gap:16px;color:#8396ad;font-size:.88rem}
+    .hero-meta span{display:flex;gap:8px;align-items:center}
+    .hero-meta b{color:#d0dbe8}
 
-    .architecture{
-      position:relative;
-      padding:26px;
-      border:1px solid rgba(148,163,184,.14);
-      background:linear-gradient(180deg,rgba(13,22,38,.78),rgba(9,16,29,.88));
-      border-radius:28px;
+    .profile-card{
+      position:relative;overflow:hidden;
+      border:1px solid rgba(148,163,184,.15);
+      background:
+        radial-gradient(circle at 82% 18%,rgba(139,92,246,.15),transparent 34%),
+        radial-gradient(circle at 18% 80%,rgba(83,216,255,.11),transparent 32%),
+        linear-gradient(180deg,rgba(15,26,44,.96),rgba(9,17,30,.95));
+      border-radius:30px;
       box-shadow:var(--shadow);
-      overflow:hidden;
+      padding:22px
     }
-    .architecture:before{
-      content:"";position:absolute;width:240px;height:240px;border-radius:50%;
-      background:rgba(73,215,255,.08);filter:blur(55px);right:-70px;top:-60px
+    .profile-image-shell{
+      position:relative;
+      border-radius:22px;overflow:hidden;
+      background:linear-gradient(135deg,rgba(83,216,255,.08),rgba(139,92,246,.10));
+      border:1px solid rgba(255,255,255,.08);
+      aspect-ratio:4/5
     }
-    .arch-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
-    .arch-title{font-weight:850;font-size:1rem}
-    .live{
-      font-size:.76rem;color:#86efac;padding:7px 10px;border-radius:999px;
-      background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.18)
+    .profile-image-shell img{
+      width:100%;height:100%;object-fit:cover;object-position:center top;display:block
     }
-    .flow{display:grid;gap:11px;position:relative}
-    .flow-row{display:grid;grid-template-columns:1fr 34px 1fr;align-items:center;gap:8px}
-    .flow-node{
-      padding:15px 14px;border-radius:14px;
-      background:rgba(255,255,255,.025);
-      border:1px solid rgba(148,163,184,.13);
-      min-height:58px;display:flex;align-items:center;justify-content:center;text-align:center;
-      font-size:.87rem;color:#dbe8f6;font-weight:700;
+    .profile-overlay{
+      position:absolute;left:0;right:0;bottom:0;padding:48px 18px 18px;
+      background:linear-gradient(to top,rgba(4,8,15,.94),rgba(4,8,15,.45),transparent)
     }
-    .flow-node.accent{border-color:rgba(73,215,255,.25);background:rgba(73,215,255,.055)}
-    .flow-arrow{color:#58728c;text-align:center;font-weight:900}
-    .arch-caption{margin-top:17px;color:#7f92aa;font-size:.81rem}
+    .profile-name{font-weight:900;font-size:1.18rem}
+    .profile-role{color:#a8bad0;font-size:.88rem;margin-top:2px}
+    .profile-status{
+      position:absolute;top:16px;right:16px;
+      padding:7px 10px;border-radius:999px;font-size:.74rem;font-weight:800;
+      color:#9df5b7;background:rgba(34,197,94,.11);border:1px solid rgba(34,197,94,.20);
+      backdrop-filter:blur(10px)
+    }
+    .profile-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+    .stat{
+      padding:12px;border-radius:14px;text-align:center;
+      background:rgba(255,255,255,.028);border:1px solid rgba(148,163,184,.1)
+    }
+    .stat b{display:block;font-size:.92rem}
+    .stat span{font-size:.7rem;color:#7f92aa}
 
-    section{padding:88px 0}
-    .section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:34px}
-    .section-head h2{font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.045em;margin-top:8px}
+    section{padding:86px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:26px;margin-bottom:34px}
+    .section-head h2{font-size:clamp(2rem,4vw,3.1rem);letter-spacing:-.045em;margin-top:8px}
     .section-head p{max-width:620px;color:var(--muted)}
-
-    .expertise-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
     .card{
       border:1px solid var(--line);
       background:var(--panel);
       border-radius:var(--radius);
-      box-shadow:0 10px 34px rgba(0,0,0,.13);
+      box-shadow:0 10px 34px rgba(0,0,0,.14)
     }
+
+    .expertise-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
     .expertise{padding:24px}
     .icon{
       width:46px;height:46px;border-radius:14px;display:grid;place-items:center;
-      background:linear-gradient(135deg,rgba(73,215,255,.12),rgba(139,92,246,.12));
-      border:1px solid rgba(73,215,255,.18);font-size:1.3rem;margin-bottom:18px
+      background:linear-gradient(135deg,rgba(83,216,255,.12),rgba(139,92,246,.12));
+      border:1px solid rgba(83,216,255,.18);font-size:1.28rem;margin-bottom:18px
     }
-    .expertise h3{font-size:1.05rem;margin-bottom:8px}
+    .expertise h3{font-size:1.04rem;margin-bottom:8px}
     .expertise p{color:var(--muted);font-size:.92rem}
 
     .projects{display:grid;gap:22px}
     .project-main{
-      padding:34px;
-      display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center;
-      border-color:rgba(73,215,255,.22);
+      padding:34px;display:grid;grid-template-columns:1.08fr .92fr;gap:34px;align-items:center;
+      border-color:rgba(83,216,255,.22);
       background:
-        radial-gradient(circle at 90% 10%,rgba(73,215,255,.08),transparent 28%),
-        linear-gradient(180deg,rgba(14,25,43,.9),rgba(10,17,30,.9));
+        radial-gradient(circle at 90% 10%,rgba(83,216,255,.08),transparent 28%),
+        linear-gradient(180deg,rgba(14,25,43,.92),rgba(10,17,30,.92))
     }
-    .project-kicker{color:var(--cyan);font-size:.78rem;font-weight:900;letter-spacing:.11em;text-transform:uppercase}
-    .project-main h3,.project-secondary h3{font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:-.035em;margin:8px 0 12px}
+    .project-kicker{color:var(--cyan);font-size:.77rem;font-weight:900;letter-spacing:.11em;text-transform:uppercase}
+    .project-main h3,.project-secondary h3{
+      font-size:clamp(1.6rem,3vw,2.35rem);letter-spacing:-.035em;margin:8px 0 12px
+    }
     .project-main p,.project-secondary p{color:var(--muted)}
     .tags{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 24px}
     .tag{
-      font-size:.76rem;font-weight:750;color:#bfefff;
-      padding:7px 10px;border-radius:999px;
-      background:rgba(73,215,255,.06);border:1px solid rgba(73,215,255,.13)
+      font-size:.76rem;font-weight:750;color:#c5f1ff;padding:7px 10px;border-radius:999px;
+      background:rgba(83,216,255,.06);border:1px solid rgba(83,216,255,.13)
     }
     .project-actions{display:flex;flex-wrap:wrap;gap:10px}
     .pipeline{
-      display:flex;flex-direction:column;gap:8px;
-      padding:22px;border-radius:18px;background:rgba(3,9,18,.55);border:1px solid var(--line)
+      display:flex;flex-direction:column;gap:8px;padding:22px;border-radius:18px;
+      background:rgba(3,9,18,.55);border:1px solid var(--line)
     }
     .pipe{
       display:flex;align-items:center;justify-content:space-between;gap:12px;
-      padding:10px 12px;border-radius:11px;background:rgba(255,255,255,.025)
+      padding:10px 12px;border-radius:11px;background:rgba(255,255,255,.026)
     }
     .pipe strong{font-size:.84rem}
-    .pipe span{font-size:.74rem;color:#7890aa}
-    .pipe-arrow{text-align:center;color:#4b657d;font-size:.85rem}
+    .pipe span{font-size:.73rem;color:#7890aa}
+    .pipe-arrow{text-align:center;color:#4b657d;font-size:.84rem}
     .project-secondary{
-      padding:30px;
-      display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center
+      padding:30px;display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center
     }
     .project-badge{
-      min-width:160px;padding:22px;border-radius:18px;text-align:center;
-      background:linear-gradient(145deg,rgba(139,92,246,.10),rgba(73,215,255,.06));
+      min-width:165px;padding:22px;border-radius:18px;text-align:center;
+      background:linear-gradient(145deg,rgba(139,92,246,.11),rgba(83,216,255,.06));
       border:1px solid rgba(139,92,246,.18)
     }
     .project-badge .big{font-size:2.1rem;font-weight:900}
     .project-badge .small{color:#8fa1b7;font-size:.8rem}
+
+    .architecture-section{
+      padding:32px;
+      background:
+        linear-gradient(135deg,rgba(83,216,255,.055),rgba(139,92,246,.055)),
+        var(--panel-strong)
+    }
+    .architecture-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:26px}
+    .arch-step{
+      position:relative;padding:18px;border-radius:16px;
+      background:rgba(255,255,255,.025);border:1px solid rgba(148,163,184,.12)
+    }
+    .arch-step:after{
+      content:"→";position:absolute;right:-10px;top:50%;transform:translateY(-50%);
+      color:#4f6d87;font-weight:900
+    }
+    .arch-step:nth-child(4n):after,.arch-step:last-child:after{display:none}
+    .arch-step .n{font-size:.72rem;color:var(--cyan);font-weight:900}
+    .arch-step h4{font-size:.94rem;margin-top:4px}
+    .arch-step p{font-size:.78rem;color:#8195ac;margin-top:3px}
 
     .stack-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .stack-card{padding:22px}
@@ -224,28 +244,40 @@
       border:1px solid rgba(148,163,184,.11);font-size:.82rem;color:#adc0d5
     }
 
-    .cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-    .cert{padding:26px;display:flex;align-items:center;gap:18px}
-    .cert-logo{
-      width:54px;height:54px;border-radius:16px;display:grid;place-items:center;font-weight:900;
-      background:linear-gradient(135deg,rgba(73,215,255,.14),rgba(139,92,246,.14));
-      border:1px solid rgba(73,215,255,.18)
+    .cert-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .cert{
+      padding:28px;display:flex;align-items:flex-start;justify-content:space-between;gap:18px;
+      transition:.25s
     }
-    .cert p{color:var(--muted);font-size:.9rem;margin-top:4px}
+    .cert:hover{transform:translateY(-3px);border-color:rgba(83,216,255,.28)}
+    .cert-left{display:flex;align-items:flex-start;gap:17px}
+    .cert-logo{
+      width:56px;height:56px;border-radius:16px;display:grid;place-items:center;
+      background:linear-gradient(135deg,rgba(83,216,255,.14),rgba(139,92,246,.14));
+      border:1px solid rgba(83,216,255,.18);
+      font-weight:900;color:#dff7ff;flex:0 0 auto
+    }
+    .cert h3{font-size:1.05rem}
+    .cert p{color:var(--muted);font-size:.9rem;margin-top:5px}
+    .cert-code{display:inline-block;margin-top:9px;font-size:.75rem;color:#7890aa}
+    .credential-link{
+      white-space:nowrap;font-size:.82rem;font-weight:850;color:var(--cyan);
+      padding:9px 11px;border-radius:11px;background:rgba(83,216,255,.05);
+      border:1px solid rgba(83,216,255,.15)
+    }
 
     .cta{
-      padding:42px;
-      display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;
+      padding:42px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;
       background:
-        radial-gradient(circle at 12% 20%,rgba(73,215,255,.09),transparent 32%),
+        radial-gradient(circle at 12% 20%,rgba(83,216,255,.09),transparent 32%),
         radial-gradient(circle at 88% 70%,rgba(139,92,246,.10),transparent 28%),
-        var(--panel-2);
+        var(--panel-strong)
     }
-    .cta h2{font-size:clamp(2rem,4vw,3.1rem);letter-spacing:-.045em}
+    .cta h2{font-size:clamp(2rem,4vw,3.05rem);letter-spacing:-.045em}
     .cta p{margin-top:9px;color:var(--muted);max-width:680px}
+
     footer{padding:34px 0 44px;color:#70849b;font-size:.87rem;border-top:1px solid var(--line)}
     .footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-
     .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
     .reveal.show{opacity:1;transform:none}
 
@@ -253,19 +285,23 @@
       .hero-grid,.project-main{grid-template-columns:1fr}
       .expertise-grid{grid-template-columns:repeat(2,1fr)}
       .stack-grid{grid-template-columns:repeat(2,1fr)}
+      .architecture-grid{grid-template-columns:repeat(2,1fr)}
+      .arch-step:nth-child(2n):after{display:none}
       .project-secondary,.cta{grid-template-columns:1fr}
       .project-badge{max-width:220px}
+      .profile-card{max-width:560px}
     }
     @media(max-width:720px){
       .nav-links a:not(.nav-cta){display:none}
-      .hero{padding-top:82px}
-      section{padding:68px 0}
-      .expertise-grid,.stack-grid,.cert-grid{grid-template-columns:1fr}
-      .section-head{align-items:start;flex-direction:column}
+      .hero{padding-top:78px}
+      section{padding:66px 0}
+      .expertise-grid,.stack-grid,.cert-grid,.architecture-grid{grid-template-columns:1fr}
+      .arch-step:after{display:none}
+      .section-head{align-items:flex-start;flex-direction:column}
       .hero-actions .btn{width:100%}
-      .project-main,.project-secondary,.cta{padding:24px}
-      .architecture{padding:18px}
-      .flow-row{grid-template-columns:1fr 26px 1fr}
+      .project-main,.project-secondary,.architecture-section,.cta{padding:24px}
+      .cert{flex-direction:column}
+      .credential-link{align-self:flex-start}
     }
   </style>
 </head>
@@ -277,6 +313,7 @@
         <span class="brand-mark">A</span>
         <span>Aya Abdel-Nasser</span>
       </a>
+
       <div class="nav-links">
         <a href="#expertise">Expertise</a>
         <a href="#projects">Projects</a>
@@ -294,6 +331,7 @@
           <div class="eyebrow"><span class="dot"></span> Data Engineering Portfolio</div>
           <h1><span>Aya Abdel-Nasser</span></h1>
           <div class="role">Data Engineer · Analytics Engineering · Cloud Data Platforms</div>
+
           <p class="hero-copy">
             I build production-oriented data systems that move data from operational sources into reliable analytical and decision-ready platforms — with ETL/ELT, CDC, streaming, orchestration, warehouse modeling and governed analytics.
           </p>
@@ -312,40 +350,22 @@
           </div>
         </div>
 
-        <div class="architecture reveal">
-          <div class="arch-head">
-            <div>
-              <div class="project-kicker">Architecture Snapshot</div>
-              <div class="arch-title">Modern Data Flow</div>
-            </div>
-            <div class="live">● System Thinking</div>
-          </div>
-
-          <div class="flow">
-            <div class="flow-row">
-              <div class="flow-node accent">Operational DB</div>
-              <div class="flow-arrow">→</div>
-              <div class="flow-node">CDC / Ingestion</div>
-            </div>
-            <div class="flow-row">
-              <div class="flow-node">Kafka / Events</div>
-              <div class="flow-arrow">→</div>
-              <div class="flow-node accent">Spark / Processing</div>
-            </div>
-            <div class="flow-row">
-              <div class="flow-node">Cloud Warehouse</div>
-              <div class="flow-arrow">→</div>
-              <div class="flow-node">dbt / Modeling</div>
-            </div>
-            <div class="flow-row">
-              <div class="flow-node">Airflow / Quality</div>
-              <div class="flow-arrow">→</div>
-              <div class="flow-node accent">BI / Decisions</div>
+        <aside class="profile-card reveal">
+          <div class="profile-image-shell">
+            <img src="https://avatars.githubusercontent.com/u/262401656?v=4" alt="Aya Abdel-Nasser" />
+            <div class="profile-status">● Open to opportunities</div>
+            <div class="profile-overlay">
+              <div class="profile-name">Aya Abdel-Nasser</div>
+              <div class="profile-role">Data Engineer</div>
             </div>
           </div>
 
-          <div class="arch-caption">Designed around traceability, layered transformation, orchestration and analytics consumption.</div>
-        </div>
+          <div class="profile-stats">
+            <div class="stat"><b>ETL / ELT</b><span>Pipelines</span></div>
+            <div class="stat"><b>Cloud</b><span>Analytics</span></div>
+            <div class="stat"><b>dbt</b><span>Modeling</span></div>
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -411,7 +431,7 @@
 
               <div class="project-actions">
                 <a class="btn btn-primary" href="https://github.com/Aya-Abdel-Nasser/pharmstock-ai-platform" target="_blank" rel="noopener noreferrer">View Repository ↗</a>
-                <a class="btn btn-ghost" href="https://github.com/Aya-Abdel-Nasser/pharmstock-ai-platform#-system-architecture" target="_blank" rel="noopener noreferrer">Architecture</a>
+                <a class="btn btn-ghost" href="#pharmstock-architecture">View Architecture ↓</a>
               </div>
             </div>
 
@@ -430,6 +450,25 @@
             </div>
           </article>
 
+          <article id="pharmstock-architecture" class="card architecture-section reveal">
+            <div class="project-kicker">PharmStock Architecture Breakdown</div>
+            <h3 style="font-size:clamp(1.6rem,3vw,2.3rem);margin-top:8px;letter-spacing:-.035em;">From operational events to governed intelligence.</h3>
+            <p style="color:var(--muted);max-width:820px;margin-top:8px;">
+              This section is intentionally separate from the repository link. It gives recruiters a fast architectural view of the platform directly inside the portfolio.
+            </p>
+
+            <div class="architecture-grid">
+              <div class="arch-step"><div class="n">01</div><h4>PostgreSQL</h4><p>Operational transactional source.</p></div>
+              <div class="arch-step"><div class="n">02</div><h4>Debezium</h4><p>Change Data Capture from source tables.</p></div>
+              <div class="arch-step"><div class="n">03</div><h4>Apache Kafka</h4><p>Streaming transport for CDC events.</p></div>
+              <div class="arch-step"><div class="n">04</div><h4>Apache Spark</h4><p>Historical and incremental processing.</p></div>
+              <div class="arch-step"><div class="n">05</div><h4>BigQuery</h4><p>Cloud analytical warehouse.</p></div>
+              <div class="arch-step"><div class="n">06</div><h4>dbt + Airflow</h4><p>Transformation, modeling, orchestration and DQ.</p></div>
+              <div class="arch-step"><div class="n">07</div><h4>MLflow + Online ML</h4><p>Model lifecycle, registry and serving.</p></div>
+              <div class="arch-step"><div class="n">08</div><h4>Governance + Power BI</h4><p>Human-controlled decisions and analytics.</p></div>
+            </div>
+          </article>
+
           <article class="card project-secondary reveal">
             <div>
               <div class="project-kicker">Project 02 · Data Warehousing</div>
@@ -437,14 +476,17 @@
               <p>
                 A SQL Server + SSIS data warehouse implementation using a Star Schema, controlled ETL flow, lookup transformations and SCD Type 2 for historical customer tracking.
               </p>
+
               <div class="tags">
                 <span class="tag">SQL Server</span><span class="tag">SSIS</span><span class="tag">Star Schema</span>
                 <span class="tag">SCD Type 2</span><span class="tag">Lookup Transformations</span>
               </div>
+
               <div class="project-actions">
                 <a class="btn btn-primary" href="https://github.com/Aya-Abdel-Nasser/End-to-End-Sales-DataWarehouse-ETL" target="_blank" rel="noopener noreferrer">View Repository ↗</a>
               </div>
             </div>
+
             <div class="project-badge">
               <div class="big">SSIS</div>
               <div class="small">ETL → Star Schema</div>
@@ -483,7 +525,7 @@
           </article>
           <article class="card stack-card reveal">
             <h3>Cloud & Analytics</h3>
-            <div class="stack-list"><span class="stack-chip">Microsoft Fabric</span><span class="stack-chip">Azure</span><span class="stack-chip">Power BI</span></div>
+            <div class="stack-list"><span class="stack-chip">Microsoft Fabric</span><span class="stack-chip">Microsoft Azure</span><span class="stack-chip">Power BI</span></div>
           </article>
           <article class="card stack-card reveal">
             <h3>MLOps & Delivery</h3>
@@ -497,25 +539,35 @@
       <div class="wrap">
         <div class="section-head reveal">
           <div>
-            <div class="eyebrow">Credentials</div>
-            <h2>Certifications & intensive training.</h2>
+            <div class="eyebrow">Microsoft Credentials</div>
+            <h2>Verified certifications.</h2>
           </div>
+          <p>Only earned credentials are shown here. Each card links directly to the official Microsoft credential page.</p>
         </div>
 
         <div class="cert-grid">
           <article class="card cert reveal">
-            <div class="cert-logo">MS</div>
-            <div>
-              <h3>Microsoft Certified</h3>
-              <p>Fabric Data Engineer Associate</p>
+            <div class="cert-left">
+              <div class="cert-logo">MS</div>
+              <div>
+                <h3>Microsoft Certified: Fabric Data Engineer Associate</h3>
+                <p>Data engineering with Microsoft Fabric.</p>
+                <span class="cert-code">DP-700</span>
+              </div>
             </div>
+            <a class="credential-link" href="https://learn.microsoft.com/api/credentials/share/en-us/AyaAbdElNasser-2402/FD130F2515CB3FF3?sharingId=79F0AA8B61541F9B" target="_blank" rel="noopener noreferrer">View Credential ↗</a>
           </article>
+
           <article class="card cert reveal">
-            <div class="cert-logo">DE</div>
-            <div>
-              <h3>Data Engineering Intensive Program</h3>
-              <p>Digital Pioneers — DigiLians</p>
+            <div class="cert-left">
+              <div class="cert-logo">AZ</div>
+              <div>
+                <h3>Microsoft Certified: Azure Data Fundamentals</h3>
+                <p>Core data concepts and Azure data services.</p>
+                <span class="cert-code">DP-900</span>
+              </div>
             </div>
+            <a class="credential-link" href="https://learn.microsoft.com/api/credentials/share/en-us/AyaAbdElNasser-2402/313F6A1B0300C52?sharingId=79F0AA8B61541F9B" target="_blank" rel="noopener noreferrer">View Credential ↗</a>
           </article>
         </div>
       </div>
@@ -527,8 +579,9 @@
           <div>
             <div class="eyebrow">Let’s Connect</div>
             <h2>Open to Data Engineering opportunities.</h2>
-            <p>Explore the repositories, review the engineering work, or download the latest CV.</p>
+            <p>Explore the repositories, review the architecture and download the latest CV.</p>
           </div>
+
           <div class="hero-actions">
             <a class="btn btn-primary" href="Aya_Abdel_Nasser_CV.pdf" download>Download CV</a>
             <a class="btn btn-ghost" href="https://www.linkedin.com/in/aya-abd-elnasser-data-engineer" target="_blank" rel="noopener noreferrer">LinkedIn</a>
