@@ -71,8 +71,30 @@ footer{padding:27px 0;border-top:1px solid var(--border);color:#9cafaa;font-size
 <div class="tags"><span class="tag">SQL Server</span><span class="tag">Informatica CDI</span><span class="tag">dbt Core</span><span class="tag">Python</span><span class="tag">GitHub Actions</span><span class="tag">Docker</span></div>
 <div class="project-footer"><a href="https://github.com/Aya-Abdel-Nasser/commerce-analytics-platform" target="_blank" rel="noopener noreferrer">Explore repository ↗</a><a href="https://github.com/Aya-Abdel-Nasser/commerce-analytics-platform/blob/main/docs/validation/reports/BRONZE_INITIAL_SNAPSHOT_SIGNOFF_2026-10-22.md" target="_blank" rel="noopener noreferrer">Validation evidence ↗</a><a href="https://github.com/Aya-Abdel-Nasser/commerce-analytics-platform/blob/main/docs/validation/CUSTOMER_CI_INTEGRATION_SIGNOFF_20261106.md" target="_blank" rel="noopener noreferrer">CI evidence ↗</a></div>
 </div></article>
-<div class="project-row">
-<article class="project"><div class="project-body"><div class="project-top"><span class="project-number">02 — Streaming & Analytics</span></div><h3>PharmStock AI Platform V2</h3><p class="project-intro">A pharmacy-focused data engineering and analytics project exploring CDC streaming, cloud warehousing, and MLOps workflows through an integrated architecture.</p><div class="tags"><span class="tag">PostgreSQL</span><span class="tag">Debezium</span><span class="tag">Kafka</span><span class="tag">Spark</span><span class="tag">BigQuery</span><span class="tag">dbt</span><span class="tag">Airflow</span><span class="tag">MLflow</span></div><div class="project-footer"><a href="https://github.com/Aya-Abdel-Nasser/pharmstock-ai-platform" target="_blank" rel="noopener noreferrer">View repository ↗</a></div></div></article>
+<article class="project project-feature" style="border-color:#58615a"><div class="project-body">
+<div class="project-top"><span class="project-number">02 — Streaming · Cloud Analytics · MLOps</span><span class="status" style="background:#e5b28a;color:#271d16">Integrated platform</span></div>
+<h3>PharmStock AI Platform V2</h3>
+<p class="project-intro">An end-to-end, synthetic-data pharmacy operations platform connecting CDC streaming, distributed processing, cloud data warehousing, machine learning, human-reviewed operational decisions and business intelligence.</p>
+<div class="metric-grid"><div class="metric"><strong>26</strong><span>Raw BigQuery tables documented</span></div><div class="metric"><strong>26</strong><span>Current-state views documented</span></div><div class="metric"><strong>4</strong><span>Operational ML models in the platform</span></div></div>
+<div class="project-divider"></div><div class="project-inside">
+<div><h4>Engineering highlights</h4><ul class="outcomes">
+<li><b>Event-driven CDC:</b> PostgreSQL changes through Debezium and Kafka, processed with Apache Spark.</li>
+<li><b>Historical + incremental processing:</b> architecture documents a snapshot-to-CDC cutover with gap protection.</li>
+<li><b>Analytics:</b> BigQuery warehouse layers, dbt transformations and Airflow data-quality workflows.</li>
+<li><b>MLOps:</b> MLflow model tracking, registry, quality gates and model serving.</li>
+<li><b>Governed operations:</b> RBAC, human approval of decisions, evidence-grounded AI assistance, and Power BI reporting.</li>
+</ul></div>
+<div><h4>System architecture</h4><div class="pipeline">
+<div class="pipeline-step"><b>PostgreSQL → Debezium</b><small>CDC capture</small></div><div class="pipeline-arrow">↓</div>
+<div class="pipeline-step"><b>Kafka → Spark</b><small>Streaming & processing</small></div><div class="pipeline-arrow">↓</div>
+<div class="pipeline-step"><b>BigQuery → dbt → Airflow</b><small>Analytics & orchestration</small></div><div class="pipeline-arrow">↓</div>
+<div class="pipeline-step"><b>MLflow → Serving</b><small>Model lifecycle</small></div><div class="pipeline-arrow">↓</div>
+<div class="pipeline-step"><b>Governed Decisions → BI</b><small>Human-in-the-loop</small></div></div></div></div>
+<div class="tags"><span class="tag">Debezium</span><span class="tag">Kafka</span><span class="tag">Spark</span><span class="tag">BigQuery</span><span class="tag">dbt</span><span class="tag">Airflow</span><span class="tag">MLflow</span><span class="tag">Power BI</span></div>
+<p class="project-note">Documented as a production-style simulation using synthetic/calibrated data, not a live production pharmacy deployment.</p>
+<div class="project-footer"><a href="https://github.com/Aya-Abdel-Nasser/pharmstock-ai-platform" target="_blank" rel="noopener noreferrer">Explore PharmStock repository ↗</a><a href="https://github.com/Aya-Abdel-Nasser/pharmstock-ai-platform#-system-architecture" target="_blank" rel="noopener noreferrer">View architecture & evidence ↗</a></div>
+</div></article>
+<div class="project-row" style="grid-template-columns:1fr">
 <article class="project"><div class="project-body"><div class="project-top"><span class="project-number">03 — ETL & Warehousing</span></div><h3>Sales Data Warehouse</h3><p class="project-intro">A SQL Server and SSIS ETL project using a Star Schema, Lookup Transformations, and SCD Type 2 customer history to support reporting.</p><div class="tags"><span class="tag">SSIS</span><span class="tag">SQL Server</span><span class="tag">T-SQL</span><span class="tag">Star Schema</span><span class="tag">SCD Type 2</span></div><div class="project-footer"><a href="https://github.com/Aya-Abdel-Nasser/End-to-End-Sales-DataWarehouse-ETL" target="_blank" rel="noopener noreferrer">View repository ↗</a></div></div></article>
 </div>
 </div></section>
